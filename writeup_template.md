@@ -1,6 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Algorithm for Lane finding in a road image or video 
+## Algorithm for Lane finding in a road image or video using OpenCV, and image processing.
 
 ---
 
