@@ -19,27 +19,28 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Description of my pipeline. 
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps. 
+1. Convert the images to grayscale.
+2. Create a blur image using gaussian blue from gray scaled image.
+3. Canny edge detection for detecting the edge. 
+4. Define a region of interest(ROI) 
+5. Apply Hough transform to detect lanes.
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+1. seperating left and right lines using slope of the line.
+2. average of the points of the line and slope for each right and left side lines.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+As one point and slope is enoguh to exterpolate the final lane/line, and y0 is equals to image.shape[0]
+the folloing line eqation can be used to exterpolate the lane marking :
+x1 = x0 + (1/slope)*(y1-y0)
 
-![alt text][image1]
-
-
-### 2. Identify potential shortcomings with your current pipeline
-
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+### 2. Potential shortcomings 
+The parameters (e.g., kernel size, line_gap) are hard coded. This might create problem for different types of images having different color scheme and contrast.
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3.Possible improvements 
+These parameters can be fined tuned to get an optimal level so that it can detect lanes in all types of image. 
 
-A possible improvement would be to ...
 
-Another potential improvement could be to ...
