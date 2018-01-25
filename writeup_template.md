@@ -1,6 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Lane finding Writeup 
+## Algorithm for Lane finding in a road image or video 
 
 ---
 
