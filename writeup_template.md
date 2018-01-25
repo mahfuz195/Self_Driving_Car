@@ -25,7 +25,7 @@ My pipeline consisted of 5 steps.
 1. Convert the images to grayscale.
 2. Create a blur image using gaussian blue from gray scaled image.
 3. Canny edge detection for detecting the edge. 
-4. Define a region of interest(ROI) 
+4. Define a region of interest (ROI) 
 5. Apply Hough transform to detect lanes.
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
